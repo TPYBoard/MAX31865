@@ -1,3 +1,5 @@
+lib文件下载地址：http://tpyboard.com/download/data/178.html
+
 MAX31865 接线说明：
 
 eg:TPYBoard STM32F103RBT6+MAX31865
