@@ -1,16 +1,15 @@
 <h1>The MAX31865 project</h1>
 
+
+
+<img src="https://github.com/TPYBoard/MAX31865/blob/master/image/max31865模块.png" style="max-width:100%;">
+
 MAX31865模块主要使用SPI接口与单片机进行通信，本次例程使用TPYBoard STM32F103RBT6 最小系统板和MAX31865模块进行通信。
-
-<img src="https://gd1.alicdn.com/imgextra/i2/53180289/TB2ZfJsmR0kpuFjy1zdXXXuUVXa_!!53180289.png_400x400.jpg_.webp" style="max-width:100%;">
-<img src="https://gd1.alicdn.com/imgextra/i1/53180289/TB2tzsSf1J8puFjy1XbXXagqVXa_!!53180289.png_400x400.jpg_.webp" style="max-width:100%;">
-
-
 
 工程主要组成说明:
 
 <ul>
-<li>image/ -- MAX31865模块使用连接指示图</li>
+<li>image/ -- MAX31865模块实物图及连接指示图</li>
 <li>lib/ -- MAX31865模块的驱动文件和LIB库</li>
 <li>main.c  -- 主程序</li>
 </ul>
