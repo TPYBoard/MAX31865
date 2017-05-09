@@ -30,4 +30,3 @@ MAX31865 跳线说明：
 
 lib文件下载地址：http://tpyboard.com/download/data/178.html
 
-<img id="J_ImgBooth" src="https://gd1.alicdn.com/imgextra/i2/53180289/TB2ZfJsmR0kpuFjy1zdXXXuUVXa_!!53180289.png_400x400.jpg_.webp" data-haszoom="700" data-size="400x400">
