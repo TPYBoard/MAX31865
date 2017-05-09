@@ -2,7 +2,7 @@
 
 
 
-<img src="https://github.com/TPYBoard/MAX31865/blob/master/image/max31865模块.png" style="max-width:100%;">
+<img src="https://github.com/TPYBoard/MAX31865/blob/master/image/max31865实物图.png" style="max-width:100%;">
 
 MAX31865模块主要使用SPI接口与单片机进行通信，本次例程使用TPYBoard STM32F103RBT6 最小系统板和MAX31865模块进行通信。
 
