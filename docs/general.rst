@@ -17,19 +17,19 @@ The MAX31865 project
 --------------------------------
 	MAX31865 针脚指示图：
 	
-.. image:: images/0201.png
+.. image:: https://github.com/TPYBoard/MAX31865/blob/master/docs/images/0201.png
     :alt: Max31865
     :width: 810px
 	
 	MAX31865 接线说明：
 	
-.. image:: images/0202.png
+.. image:: https://github.com/TPYBoard/MAX31865/blob/master/docs/images/0202.png
     :alt: Max31865
     :width: 489px
 	
 	MAX31865 跳线说明：
 	
-.. image:: images/0203.png
+.. image:: https://github.com/TPYBoard/MAX31865/blob/master/docs/images/0203.png
     :alt: Max31865
     :width: 714px
 	
