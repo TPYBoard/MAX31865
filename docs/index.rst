@@ -6,8 +6,8 @@
 Welcome to turnip's documentation!
 ==================================
 
-.. toctree::
-   :maxdepth: 2
-   
-   MAX31865LIB说明
-   README
+Contents:
+ .. toctree::
+    :maxdepth: 2
+
+    README.rst
