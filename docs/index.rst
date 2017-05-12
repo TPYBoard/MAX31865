@@ -8,13 +8,4 @@ Welcome to turnip's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
-
-include:: README.rst
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   MAX31865LIB说明
