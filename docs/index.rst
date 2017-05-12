@@ -1,11 +1,11 @@
-MicroPython documentation and references
+Max31865 Document
 ========================================
 
 .. toctree::
 
     quickref.rst
-	general.rst
-
+    general.rst
+	
 Indices and tables
 ==================
 
