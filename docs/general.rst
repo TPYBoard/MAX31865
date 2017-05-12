@@ -16,15 +16,15 @@ The MAX31865 project
 使用说明
 --------------------------------
 	MAX31865 针脚指示图：
-	.. _fig_0201:
+	.. _fig_0102:
 	.. figure:: images/0201.png
 	
 	MAX31865 接线说明：
-	.. _fig_0202:
+	.. _fig_0103:
 	.. figure:: images/0202.png
 	
 	MAX31865 跳线说明：
-	.. _fig_0203:
+	.. _fig_0104:
 	.. figure:: images/0203.png
 	
 	MAX31865 LIB库使用说明：
