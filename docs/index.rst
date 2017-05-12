@@ -6,4 +6,10 @@ MicroPython documentation and references
     quickref.rst
 	general.rst
 
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
 
