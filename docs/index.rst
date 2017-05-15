@@ -5,6 +5,7 @@ Max31865 Document
 
     quickref.rst
     general.rst
+	tpybindex.html
 	
 Indices and tables
 ==================
