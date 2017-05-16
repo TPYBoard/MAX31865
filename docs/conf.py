@@ -47,9 +47,9 @@ templates_path = ['_templates']
 #
 # source_suffix = ['.rst', '.md']
 source_suffix = '.rst'
-
+html_additional_pages = {"index": "pyboard_index.html"}
 # The master toctree document.
-#master_doc = 'index'
+master_doc = 'index'
 
 # General information about the project.
 project = u'TurnipDocs'
@@ -102,7 +102,7 @@ html_theme='sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_additional_pages = {"index": "pyboard_index.html"}
+
 
 html_favicon = 'images/favicon.ico'
 
