@@ -107,7 +107,7 @@ html_favicon = 'images/favicon.ico'
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'TurnipDocsdoc'
-
+html_additional_pages = {"index": "pyboard_index.html"}
 
 # -- Options for LaTeX output ---------------------------------------------
 
