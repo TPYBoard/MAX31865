@@ -22,21 +22,10 @@ import sys
 sys.path.insert(0, os.path.abspath('.'))
 
 from collections import OrderedDict
-micropy_port = os.getenv('MICROPY_PORT') or 'tpyboard'
-tags.add('port_' + micropy_port)
+
 micropy_version = os.getenv('MICROPY_VERSION') or 'latest'
-micropy_all_versions = (os.getenv('MICROPY_ALL_VERSIONS') or 'latest').split(',')
-url_pattern = '%s/en/%%s/%%s' % (os.getenv('MICROPY_URL_PREFIX') or '/',)
 html_context = {
-    'port':micropy_port,
-    'port_name':ports[micropy_port],
     'port_version':micropy_version,
-    'all_ports':[],
-    'all_versions':[
-        (ver, url_pattern % (ver, micropy_port))
-            for ver in micropy_all_versions
-    ],
-    'downloads':[],
 }
 # -- General configuration ------------------------------------------------
 
