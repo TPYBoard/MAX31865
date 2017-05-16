@@ -145,7 +145,7 @@ latex_documents = [
      u'turnipsmart', 'manual'),
 ]
 
-html_additional_pages = {"index": "/pyboardindex.html"}
+html_additional_pages = {"index": "pyboardindex.html"}
 
 # -- Options for manual page output ---------------------------------------
 
