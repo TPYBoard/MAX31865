@@ -51,8 +51,6 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'tpyboardindex'
 
-html_additional_pages = {"index": "pyboard_index.html"}
-
 # General information about the project.
 project = u'TurnipDocs'
 copyright = u'2017, turnipsmart'
@@ -72,12 +70,12 @@ release = u'1.0.0'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+#language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = []
+exclude_patterns = ['build']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -147,8 +145,9 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
+html_additional_pages = {"index": "pyboard_index.html"}
 man_pages = [
-    (master_doc, 'turnipdocs', u'TurnipDocs Documentation',
+    ('index', 'turnipdocs', u'TurnipDocs Documentation',
      [author], 1)
 ]
 
