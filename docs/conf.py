@@ -49,7 +49,7 @@ templates_path = ['_templates']
 source_suffix = '.rst'
 
 # The master toctree document.
-master_doc = 'index'
+#master_doc = 'index'
 
 # General information about the project.
 project = u'TurnipDocs'
@@ -101,13 +101,16 @@ html_theme='sphinx_rtd_theme'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_additional_pages = {"index": "pyboard_index.html"}
+
 html_favicon = 'images/favicon.ico'
 
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'TurnipDocsdoc'
-html_additional_pages = {"index": "pyboard_index.html"}
+htmlhelp_basename = 'MicroPython TPYBoard'
+
 
 # -- Options for LaTeX output ---------------------------------------------
 
