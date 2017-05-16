@@ -23,11 +23,11 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # Work out the port to generate the docs for
 from collections import OrderedDict
-micropy_port = os.getenv('MICROPY_PORT') or 'pyboard'
+micropy_port = os.getenv('MICROPY_PORT') or 'tpyboard'
 tags.add('port_' + micropy_port)
 ports = OrderedDict((
     ('unix', 'unix'),
-    ('pyboard', 'the pyboard'),
+    ('tpyboard', 'the tpyboard'),
     ('wipy', 'the WiPy'),
     ('esp8266', 'the ESP8266'),
 ))
