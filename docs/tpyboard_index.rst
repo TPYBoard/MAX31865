@@ -1,5 +1,6 @@
-Max31865 Document
+TPYBoard Document
 ========================================
+
 .. toctree::
 
     tpyboard/quickref.rst
@@ -9,11 +10,10 @@ Max31865 Document
     tpyboard/hardware/index.rst
     license.rst
     pyboard_contents.rst
-	
+
 Indices and tables
 ==================
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
