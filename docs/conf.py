@@ -37,10 +37,18 @@ html_context = {
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
-
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx_selective_exclude.modindex_exclude',
+    'sphinx_selective_exclude.eager_only',
+    'sphinx_selective_exclude.search_auto_exclude',
+]
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -100,7 +108,7 @@ html_theme='sphinx_rtd_theme'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ['static']
 
 
 
@@ -140,12 +148,13 @@ latex_documents = [
      u'turnipsmart', 'manual'),
 ]
 
+html_additional_pages = {"index": "pyboardindex.html"}
 
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-html_additional_pages = {'index': 'pyboardindex.html'}
+
 man_pages = [
     ('index', 'turnipdocs', u'TurnipDocs Documentation',
      [author], 1)
