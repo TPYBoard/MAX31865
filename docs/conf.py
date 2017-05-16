@@ -25,7 +25,7 @@ html_context = {
     "github_user": "MyUserName", # Username
     "github_repo": "MyDoc", # Repo name
     "github_version": "laster", # Version
-    "conf_py_path": "/source/", # Path in the checkout to the docs root
+    "conf_py_path": "/", # Path in the checkout to the docs root
 }
 
 # -- General configuration ------------------------------------------------
@@ -43,7 +43,6 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
-    'sphinx_selective_exclude.modindex_exclude',
     'sphinx_selective_exclude.eager_only',
     'sphinx_selective_exclude.search_auto_exclude',
 ]
