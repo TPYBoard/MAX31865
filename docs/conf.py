@@ -57,7 +57,7 @@ source_suffix = '.rst'
 master_doc = 'tpyboardindex'
 
 # General information about the project.
-project = u'TurnipDocs'
+project = u'MicroPython TPYBoard'
 copyright = u'2017, turnipsmart'
 author = u'turnipsmart'
 
