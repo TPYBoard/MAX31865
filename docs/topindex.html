@@ -1,3 +1,5 @@
+{% extends "defindex.html" %}
+{% block body %}
 <h1>MicroPython文档</h1>
 <p>这是MicroPython文档，版本:{{ port_version }}</p>
 <p>micropython运行在多种系统中各有自己特定的文档。当前是TPYBoard的文档。</p>
@@ -42,3 +44,4 @@
 		</tr>
 	</table>
 </p>
+{% endblock %}
