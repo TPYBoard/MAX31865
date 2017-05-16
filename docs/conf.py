@@ -145,7 +145,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-html_additional_pages = {"index": "pyboard_index.html"}
+html_additional_pages = {'index': 'pyboardindex.html'}
 man_pages = [
     ('index', 'turnipdocs', u'TurnipDocs Documentation',
      [author], 1)
