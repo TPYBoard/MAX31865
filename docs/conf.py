@@ -12,15 +12,32 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
 
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
 
+from collections import OrderedDict
+micropy_port = os.getenv('MICROPY_PORT') or 'tpyboard'
+tags.add('port_' + micropy_port)
+micropy_version = os.getenv('MICROPY_VERSION') or 'latest'
+micropy_all_versions = (os.getenv('MICROPY_ALL_VERSIONS') or 'latest').split(',')
+url_pattern = '%s/en/%%s/%%s' % (os.getenv('MICROPY_URL_PREFIX') or '/',)
+html_context = {
+    'port':micropy_port,
+    'port_name':ports[micropy_port],
+    'port_version':micropy_version,
+    'all_ports':[],
+    'all_versions':[
+        (ver, url_pattern % (ver, micropy_port))
+            for ver in micropy_all_versions
+    ],
+    'downloads':[],
+}
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -103,6 +120,7 @@ html_favicon = 'images/favicon.ico'
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'turnipdoc'
 
+html_additional_pages = {"index": "tpybindex.html"}
 
 # -- Options for LaTeX output ---------------------------------------------
 
