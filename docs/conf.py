@@ -19,7 +19,7 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
-
+from collections import OrderedDict
 html_context = {
     "display_github": True, # Integrate GitHub
     "github_user": "MyUserName", # Username
