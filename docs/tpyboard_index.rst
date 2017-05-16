@@ -1,15 +1,14 @@
 Max31865 Document
 ========================================
-
 .. toctree::
 
-	tpyboard/quickref.rst
-	tpyboard/general.rst
-	tpyboard/tutorial/index.rst
-	library/index.rst
-	tpyboard/hardware/index.rst
-	license.rst
-	pyboard_contents.rst
+    tpyboard/quickref.rst
+    tpyboard/general.rst
+    tpyboard/tutorial/index.rst
+    library/index.rst
+    tpyboard/hardware/index.rst
+    license.rst
+    pyboard_contents.rst
 	
 Indices and tables
 ==================
