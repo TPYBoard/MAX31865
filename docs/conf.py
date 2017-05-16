@@ -47,9 +47,11 @@ templates_path = ['_templates']
 #
 # source_suffix = ['.rst', '.md']
 source_suffix = '.rst'
-#html_additional_pages = {"index": "pyboard_index.html"}
+
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'tpyboardindex'
+
+html_additional_pages = {"index": "pyboard_index.html"}
 
 # General information about the project.
 project = u'TurnipDocs'
