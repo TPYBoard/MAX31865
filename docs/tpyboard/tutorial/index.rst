@@ -1,12 +1,11 @@
 .. _tutorial-index:
 
-MicroPython tutorial
+MicroPython 教程
 ====================
 
-This tutorial is intended to get you started with your pyboard.
-All you need is a pyboard and a micro-USB cable to connect it to
-your PC.  If it is your first time, it is recommended to follow
-the tutorial through in the order below.
+本教程的目的是让我们开始您的TPYBoard的使用。
+我们需要一块TPYBoard和一根USB线并连接到电脑上。
+如果你是第一次，建议按照教程让我们开始编程吧。
 
 .. toctree::
    :maxdepth: 1
@@ -24,7 +23,7 @@ the tutorial through in the order below.
    assembler.rst
    power_ctrl.rst
 
-Tutorials requiring extra components
+扩展组建教程
 ------------------------------------
 
 .. toctree::
@@ -37,7 +36,7 @@ Tutorials requiring extra components
    amp_skin.rst
    lcd160cr_skin.rst
 
-Tips, tricks and useful things to know
+提示, 技巧和深入了解
 --------------------------------------
 
 .. toctree::
