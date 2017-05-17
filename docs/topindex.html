@@ -1,19 +1,15 @@
 {% extends "defindex.html" %}
 {% block body %}
 <h1>MicroPython文档</h1>
-
 <style>
-.table{
-	font-size:12px;
-}
-.p{
-	font-size:12px;
+.td{
+padding-bottom:10px;
 }
 </style>
-<p>这是MicroPython文档，版本:{{ port_version }}</p>
-<p>micropython运行在多种系统中各有自己特定的文档。当前是TPYBoard的文档。</p>
-<p>MicroPython和TPYBoard文档</p>
-<p>
+<p style="font-size:14px;">这是MicroPython文档，版本:{{ port_version }}</p>
+<p style="font-size:14px;">micropython运行在多种系统中各有自己特定的文档。当前是TPYBoard的文档。</p>
+<p style="font-size:14px;">MicroPython和TPYBoard文档</p>
+<p style="font-size:14px;">
 	<table>
 		<tr>
 			<td><a class="biglink" href="{{ pathto(port + "/quickref") }}">TPYBoard快速参考</a></td>
