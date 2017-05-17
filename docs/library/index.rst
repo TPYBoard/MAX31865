@@ -76,7 +76,7 @@ it will fallback to loading the built-in ``ujson`` module.
        utime.rst
        uzlib.rst
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. toctree::
        :maxdepth: 1
@@ -161,9 +161,9 @@ the following libraries.
    uctypes.rst
 
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
-   Libraries specific to the pyboard
+   Libraries specific to the tpyboard
    ---------------------------------
 
    The following libraries are specific to the pyboard.
