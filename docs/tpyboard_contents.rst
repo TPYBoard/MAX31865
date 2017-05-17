@@ -3,12 +3,11 @@ MicroPython documentation contents
 
 .. toctree::
 
-    pyboard/quickref.rst
-    pyboard/general.rst
-    pyboard/tutorial/index.rst
+    tpyboard/quickref.rst
+    tpyboard/general.rst
+    tpyboard/tutorial/index.rst
     library/index.rst
     reference/index.rst
-    pyboard/hardware/index.rst
-    genrst/index.rst
+    tpyboard/hardware/index.rst
     license.rst
 
