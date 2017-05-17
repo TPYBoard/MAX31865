@@ -1,4 +1,4 @@
-:mod:`uio` -- input/output streams
+﻿:mod:`uio` -- input/output streams
 ==================================
 
 .. module:: uio

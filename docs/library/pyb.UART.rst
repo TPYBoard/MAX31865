@@ -1,4 +1,4 @@
-.. currentmodule:: pyb
+﻿.. currentmodule:: pyb
 .. _pyb.UART:
 
 class UART -- duplex serial communication bus

@@ -1,4 +1,4 @@
-.. currentmodule:: pyb
+﻿.. currentmodule:: pyb
 .. _pyb.LED:
 
 class LED -- LED object

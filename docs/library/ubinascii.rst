@@ -1,4 +1,4 @@
-:mod:`ubinascii` -- binary/ASCII conversions
+﻿:mod:`ubinascii` -- binary/ASCII conversions
 ============================================
 
 .. module:: ubinascii

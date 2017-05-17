@@ -1,4 +1,4 @@
-:mod:`framebuf` --- Frame buffer manipulation
+﻿:mod:`framebuf` --- Frame buffer manipulation
 =============================================
 
 .. module:: framebuf

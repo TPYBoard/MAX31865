@@ -1,4 +1,4 @@
-.. currentmodule:: pyb
+﻿.. currentmodule:: pyb
 .. _pyb.Pin:
 
 class Pin -- control I/O pins

@@ -1,4 +1,4 @@
-.. currentmodule:: machine
+﻿.. currentmodule:: machine
 .. _machine.WDT:
 
 class WDT -- watchdog timer

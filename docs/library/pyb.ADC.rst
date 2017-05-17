@@ -1,4 +1,4 @@
-.. currentmodule:: pyb
+﻿.. currentmodule:: pyb
 .. _pyb.ADC:
 
 class ADC -- 数模转换

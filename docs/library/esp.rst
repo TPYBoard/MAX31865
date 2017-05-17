@@ -1,4 +1,4 @@
-:mod:`esp` --- functions related to the ESP8266
+﻿:mod:`esp` --- functions related to the ESP8266
 ===============================================
 
 .. module:: esp

@@ -1,4 +1,4 @@
-:mod:`select` -- wait for events on a set of streams
+﻿:mod:`select` -- wait for events on a set of streams
 ========================================================================
 
 .. module:: select

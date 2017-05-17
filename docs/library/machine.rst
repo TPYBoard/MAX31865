@@ -1,4 +1,4 @@
-:mod:`machine` --- functions related to the hardware
+﻿:mod:`machine` --- functions related to the hardware
 ====================================================
 
 .. module:: machine

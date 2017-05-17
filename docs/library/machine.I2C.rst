@@ -1,4 +1,4 @@
-.. currentmodule:: machine
+﻿.. currentmodule:: machine
 .. _machine.I2C:
 
 class I2C -- a two-wire serial protocol

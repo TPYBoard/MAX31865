@@ -1,4 +1,4 @@
-:mod:`math` -- mathematical functions
+﻿:mod:`math` -- mathematical functions
 =====================================
 
 .. module:: math

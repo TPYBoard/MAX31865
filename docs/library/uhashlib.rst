@@ -1,4 +1,4 @@
-:mod:`uhashlib` -- hashing algorithms
+﻿:mod:`uhashlib` -- hashing algorithms
 =====================================
 
 .. module:: uhashlib

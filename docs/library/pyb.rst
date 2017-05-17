@@ -1,4 +1,4 @@
-:mod:`pyb` --- functions related to the board
+﻿:mod:`pyb` --- functions related to the board
 =============================================
 
 .. module:: pyb

@@ -1,4 +1,4 @@
-.. currentmodule:: pyb
+﻿.. currentmodule:: pyb
 .. _pyb.Timer:
 
 class Timer -- control internal timers

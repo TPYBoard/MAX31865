@@ -1,4 +1,4 @@
-:mod:`cmath` -- mathematical functions for complex numbers
+﻿:mod:`cmath` -- mathematical functions for complex numbers
 ==========================================================
 
 .. module:: cmath

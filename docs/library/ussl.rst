@@ -1,4 +1,4 @@
-:mod:`ussl` -- SSL/TLS module
+﻿:mod:`ussl` -- SSL/TLS module
 =============================
 
 .. module:: ussl

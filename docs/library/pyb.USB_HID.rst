@@ -1,4 +1,4 @@
-.. currentmodule:: pyb
+﻿.. currentmodule:: pyb
 
 class USB_HID -- USB Human Interface Device (HID)
 =================================================

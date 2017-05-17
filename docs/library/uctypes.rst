@@ -1,4 +1,4 @@
-:mod:`uctypes` -- access binary data in a structured way
+﻿:mod:`uctypes` -- access binary data in a structured way
 ========================================================
 
 .. module:: uctypes

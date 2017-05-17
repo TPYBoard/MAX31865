@@ -1,4 +1,4 @@
-.. currentmodule:: pyb
+﻿.. currentmodule:: pyb
 
 class USB_VCP -- USB virtual comm port
 ======================================

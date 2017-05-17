@@ -1,4 +1,4 @@
-:mod:`ucollections` -- collection and container types
+﻿:mod:`ucollections` -- collection and container types
 =====================================================
 
 .. module:: ucollections

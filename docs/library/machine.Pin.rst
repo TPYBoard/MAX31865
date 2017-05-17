@@ -1,4 +1,4 @@
-.. currentmodule:: machine
+﻿.. currentmodule:: machine
 .. _machine.Pin:
 
 class Pin -- control I/O pins

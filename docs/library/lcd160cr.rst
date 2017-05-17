@@ -1,4 +1,4 @@
-:mod:`lcd160cr` --- control of LCD160CR display
+﻿:mod:`lcd160cr` --- control of LCD160CR display
 ===============================================
 
 .. module:: lcd160cr

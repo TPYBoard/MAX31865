@@ -1,4 +1,4 @@
-MicroPython libraries
+﻿MicroPython libraries
 =====================
 
 This chapter describes modules (function and class libraries) which are built

@@ -1,4 +1,4 @@
-:mod:`ujson` -- JSON encoding and decoding
+﻿:mod:`ujson` -- JSON encoding and decoding
 ==========================================
 
 .. module:: ujson

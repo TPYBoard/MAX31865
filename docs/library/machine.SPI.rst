@@ -1,4 +1,4 @@
-.. currentmodule:: machine
+﻿.. currentmodule:: machine
 .. _machine.SPI:
 
 class SPI -- a Serial Peripheral Interface bus protocol (master side)

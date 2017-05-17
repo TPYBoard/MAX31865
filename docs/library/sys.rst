@@ -1,4 +1,4 @@
-:mod:`sys` -- system specific functions
+﻿:mod:`sys` -- system specific functions
 =======================================
 
 .. module:: sys

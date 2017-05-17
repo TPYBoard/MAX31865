@@ -1,4 +1,4 @@
-.. currentmodule:: pyb
+﻿.. currentmodule:: pyb
 
 class Accel -- 加速度控制
 ====================================

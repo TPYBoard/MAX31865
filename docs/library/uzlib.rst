@@ -1,4 +1,4 @@
-:mod:`uzlib` -- zlib 解压缩
+﻿:mod:`uzlib` -- zlib 解压缩
 ==================================
 
 .. module:: uzlib
