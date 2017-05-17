@@ -1,4 +1,5 @@
-.._quickref:
+.. _quickref:
+
 TPYBoard快速参考手册
 ====================
 
