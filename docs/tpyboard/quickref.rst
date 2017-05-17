@@ -1,7 +1,7 @@
 .. _quickref:
 
 TPYBoard快速参考手册
-===============================
+===================
 
 下面是PYBv1.0的针脚图。你也可以查看其他版本的pyboard的针脚图:
 `PYBv1.1 <http://micropython.org/resources/pybv11-pinout.jpg>`__
