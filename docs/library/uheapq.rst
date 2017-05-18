@@ -1,25 +1,24 @@
-:mod:`uheapq` -- heap queue algorithm
+:mod:`uheapq` -- 堆排序算法
 =====================================
 
 .. module:: uheapq
-   :synopsis: heap queue algorithm
+   :synopsis: 堆排序算法
 
-This module implements the heap queue algorithm.
+提供了堆排序算法。
 
-A heap queue is simply a list that has its elements stored in a certain way.
+堆队列是一个列表，它的元素以特定的方式存储。
 
-Functions
+函数
 ---------
 
 .. function:: heappush(heap, item)
 
-   Push the ``item`` onto the ``heap``.
+   把 ``item`` 推到 ``heap``。
 
 .. function:: heappop(heap)
 
-   Pop the first item from the ``heap``, and return it.  Raises IndexError if
-   heap is empty.
+   从 ``heap``弹出第一个元素并返回。  如果是堆时空的会抛出IndexError。
 
 .. function:: heapify(x)
 
-   Convert the list ``x`` into a heap.  This is an in-place operation.
+   将列表 ``x`` 转换成堆。
