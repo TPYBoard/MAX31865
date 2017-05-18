@@ -1,22 +1,19 @@
-:mod:`sys` -- system specific functions
+:mod:`sys` -- 系统特有功能函数
 =======================================
 
 .. module:: sys
-   :synopsis: system specific functions
+   :synopsis: 系统特有功能函数
 
-Functions
+函数
 ---------
 
 .. function:: exit(retval=0)
 
-   Terminate current program with a given exit code. Underlyingly, this
-   function raise as ``SystemExit`` exception. If an argument is given, its
-   value given as an argument to ``SystemExit``.
+   终止当前程序给定的退出代码。 函数会抛出 ``SystemExit`` 异常。
 
 .. function:: print_exception(exc, file=sys.stdout)
 
-   Print exception with a traceback to a file-like object `file` (or
-   ``sys.stdout`` by default).
+   打印异常与追踪到一个类似文件的对象 `file` (或者缺省 ``sys.stdout`` ).
 
    .. admonition:: Difference to CPython
       :class: attention
@@ -28,21 +25,20 @@ Functions
       positional; further arguments are not supported. CPython-compatible
       ``traceback`` module can be found in micropython-lib.
 
-Constants
+常数
 ---------
 
 .. data:: argv
 
-   A mutable list of arguments the current program was started with.
+   当前程序启动时参数的可变列表。
 
 .. data:: byteorder
 
-   The byte order of the system ("little" or "big").
+   系统字节顺序 ("little" or "big").
 
 .. data:: implementation
 
-   Object with information about the current Python implementation. For
-   MicroPython, it has following attributes:
+   使用当前Python实现的。对于micropython，它具有以下属性:
 
    * `name` - string "micropython"
    * `version` - tuple (major, minor, micro), e.g. (1, 7, 0)
@@ -59,14 +55,10 @@ Constants
 
 .. data:: maxsize
 
-   Maximum value which a native integer type can hold on the current platform,
-   or maximum value representable by MicroPython integer type, if it's smaller
-   than platform max value (that is the case for MicroPython ports without
-   long int support).
+   一个土生土长的整数类型的最大值可以把握当前的平台，或最大值的micropython整型表示，
+   如果它小于平台最大值（即micropython端口没有长整型数据支持的情况下）。
 
-   This attribute is useful for detecting "bitness" of a platform (32-bit vs
-   64-bit, etc.). It's recommended to not compare this attribute to some
-   value directly, but instead count number of bits in it::
+   可用于检测“意义”的一个平台（32位和64位，等）。建议不要直接将此属性与某些值比较，而是计算它的位数::
 
     bits = 0
     v = sys.maxsize
@@ -84,12 +76,11 @@ Constants
 
 .. data:: modules
 
-   Dictionary of loaded modules. On some ports, it may not include builtin
-   modules.
+   加载模块字典。在一部分环境中它可能不包含内置模块。
 
 .. data:: path
 
-   A mutable list of directories to search for imported modules.
+   搜索导入模块的可变目录列表。
 
 .. data:: platform
 
@@ -102,20 +93,20 @@ Constants
 
 .. data:: stderr
 
-   Standard error stream.
+   标准错误流。
 
 .. data:: stdin
 
-   Standard input stream.
+   标准输入流。
 
 .. data:: stdout
 
-   Standard output stream.
+   标准输出流。
 
 .. data:: version
 
-   Python language version that this implementation conforms to, as a string.
+   符合的Python语言版本，如字符串。
 
 .. data:: version_info
 
-   Python language version that this implementation conforms to, as a tuple of ints.
+   Python语言版本，实现符合，作为一个元组的值。
