@@ -85,18 +85,15 @@
 
 .. function:: disable_irq()
 
-   Disable interrupt requests.
-   Returns the previous IRQ state: ``False``/``True`` for disabled/enabled IRQs
-   respectively.  This return value can be passed to enable_irq to restore
-   the IRQ to its original state.
+   禁用中断请求。
+   返回上一个IRQ状态：``False``/``True``分别为禁用/启用的IRQ。该返回值可以传递给enable_irq将IRQ恢复到原始状态。
 
 .. function:: enable_irq(state=True)
 
-   Enable interrupt requests.
-   If ``state`` is ``True`` (the default value) then IRQs are enabled.
-   If ``state`` is ``False`` then IRQs are disabled.  The most common use of
-   this function is to pass it the value returned by ``disable_irq`` to
-   exit a critical section.
+   启用中断请求
+   如果 ``state`` 是 ``True`` (默认值) 启用中断状态。
+   如果 ``state`` 是 ``False`` 禁用中断状态。
+   这个函数的最常见的用法是传递返回的值``disable_irq``来退出临界区。
 
 电源相关功能
 -----------------------
@@ -105,59 +102,44 @@
 
     .. function:: freq([sysclk[, hclk[, pclk1[, pclk2]]]])
     
-       If given no arguments, returns a tuple of clock frequencies:
+       如果没有参数，返回一个时钟频率的元组:
        (sysclk, hclk, pclk1, pclk2).
-       These correspond to:
+       对应如下:
     
-        - sysclk: frequency of the CPU
-        - hclk: frequency of the AHB bus, core memory and DMA
-        - pclk1: frequency of the APB1 bus
-        - pclk2: frequency of the APB2 bus
+        - sysclk: CPU频率
+        - hclk: AHB总线，核心内存和DMA的频率
+        - pclk1: APB1总线的频率
+        - pclk2: APB2总线的频率
     
-       If given any arguments then the function sets the frequency of the CPU,
-       and the busses if additional arguments are given.  Frequencies are given in
-       Hz.  Eg freq(120000000) sets sysclk (the CPU frequency) to 120MHz.  Note that
-       not all values are supported and the largest supported frequency not greater
-       than the given value will be selected.
+       如果给出任何参数，则函数设置CPU的频率，如果给出了其他参数，则该总线将被设置。
+       频率以Hz为单位。例如频率（120000000）将sysclk（CPU频率）设置为120MHz。
+       请注意，不支持所有值，并且将选择不大于给定值的最大支持频率。
+    
+       支持的sysclk频率为（MHz）：8,16,24,30,32,36,40,42,48,54,56,60,64,72,84,96,108,120,144,168。
+       
+       hclk的最大频率为168MHz，pclk1为42MHz，pclk2为84MHz。确保不要将频率设置在这些值以上。
     
-       Supported sysclk frequencies are (in MHz): 8, 16, 24, 30, 32, 36, 40, 42, 48,
-       54, 56, 60, 64, 72, 84, 96, 108, 120, 144, 168.
+       hclk，pclk1和pclk2频率使用预分频器（分频器）从sysclk频率派生。
+       支持的预分频器有：1，2，4，8，16，64，128，256，512。
+       支持的pclk1和pclk2的预分频器是：1,2,4,8。预分频器将被??选择为最适合所请求的频率。
     
-       The maximum frequency of hclk is 168MHz, of pclk1 is 42MHz, and of pclk2 is
-       84MHz.  Be sure not to set frequencies above these values.
+       8MHz的sysclk频率直接使用HSE（外部晶振），16MHz直接使用HSI（内部振荡器）。
+       较高的频率使用HSE驱动PLL（锁相环），然后使用PLL的输出。
     
-       The hclk, pclk1 and pclk2 frequencies are derived from the sysclk frequency
-       using a prescaler (divider).  Supported prescalers for hclk are: 1, 2, 4, 8,
-       16, 64, 128, 256, 512.  Supported prescalers for pclk1 and pclk2 are: 1, 2,
-       4, 8.  A prescaler will be chosen to best match the requested frequency.
-    
-       A sysclk frequency of
-       8MHz uses the HSE (external crystal) directly and 16MHz uses the HSI
-       (internal oscillator) directly.  The higher frequencies use the HSE to
-       drive the PLL (phase locked loop), and then use the output of the PLL.
-    
-       Note that if you change the frequency while the USB is enabled then
-       the USB may become unreliable.  It is best to change the frequency
-       in boot.py, before the USB peripheral is started.  Also note that sysclk
-       frequencies below 36MHz do not allow the USB to function correctly.
+       注意：如果在启用USB时更改频率，则USB可能会变得不可靠。在USB外设启动之前，最好在boot.py中更改频率。
+       另请注意，低于36MHz的sysclk频率不允许USB正常工作。
     
     .. function:: wfi()
     
-       Wait for an internal or external interrupt.
-    
-       This executes a ``wfi`` instruction which reduces power consumption
-       of the MCU until any interrupt occurs (be it internal or external),
-       at which point execution continues.  Note that the system-tick interrupt
-       occurs once every millisecond (1000Hz) so this function will block for
-       at most 1ms.
+       等待内部或外部中断。
+       这将执行一个``wfi``指令，降低MCU的功耗，直到发生任何中断（无论是内部还是外部），此时执行将继续。
+       请注意，系统刻度中断每毫秒（1000Hz）发生一次，因此该功能将阻塞至多1ms。
     
     .. function:: stop()
     
-       Put the pyboard in a "sleeping" state.
-    
-       This reduces power consumption to less than 500 uA.  To wake from this
-       sleep state requires an external interrupt or a real-time-clock event.
-       Upon waking execution continues where it left off.
+       将TPYBoard开发板置于"sleeping"状态。
+    
+       这将功耗降低到小于50 uA。要从此休眠状态唤醒需要实时时钟事件或X1（PA0 = WKUP）或X18（PC13 = TAMP1）上的外部中断。醒来后系统会进行硬复位
     
        See :meth:`rtc.wakeup` to configure a real-time-clock wakeup event.
     
@@ -172,116 +154,92 @@
     
        See :meth:`rtc.wakeup` to configure a real-time-clock wakeup event.
 
-Miscellaneous functions
+其他功能
 -----------------------
 
 .. only:: port_pyboard
 
     .. function:: have_cdc()
     
-       Return True if USB is connected as a serial device, False otherwise.
+       如果USB作为串行设备连接，则返回True，否则返回False。
     
-       .. note:: This function is deprecated.  Use pyb.USB_VCP().isconnected() instead.
+       .. 注意:: 次方法已经用pyb.USB_VCP().isconnected()代替。
     
     .. function:: hid((buttons, x, y, z))
     
-       Takes a 4-tuple (or list) and sends it to the USB host (the PC) to
-       signal a HID mouse-motion event.
+       使用4元组（或列表）并将其发送到USB主机（PC）以发出HID鼠标移动事件。
     
-       .. note:: This function is deprecated.  Use :meth:`pyb.USB_HID.send()` instead.
-    
+       .. 注意:: 次方法已经用:meth:`pyb.USB_HID.send()`代替。
+    
     .. function:: info([dump_alloc_table])
     
-       Print out lots of information about the board.
+       输出开发板的信息
 
 .. function:: main(filename)
 
-   Set the filename of the main script to run after boot.py is finished.  If
-   this function is not called then the default file main.py will be executed.
+   设置boot.py完成后要运行的主脚本的文件名。如果未调用此函数，则将执行默认文件main.py。
 
-   It only makes sense to call this function from within boot.py.
+   在boot.py中调用此函数。
 
 .. only:: port_pyboard
 
     .. function:: mount(device, mountpoint, \*, readonly=False, mkfs=False)
     
-       Mount a block device and make it available as part of the filesystem.
-       ``device`` must be an object that provides the block protocol:
-    
+       安装一个块设备并使其作为文件系统的一部分可用。 ``device``必须是提供块协议的对象:
         - ``readblocks(self, blocknum, buf)``
-        - ``writeblocks(self, blocknum, buf)`` (optional)
+        - ``writeblocks(self, blocknum, buf)`` (可选)
         - ``count(self)``
-        - ``sync(self)`` (optional)
+        - ``sync(self)`` (可选)
     
-       ``readblocks`` and ``writeblocks`` should copy data between ``buf`` and
-       the block device, starting from block number ``blocknum`` on the device.
-       ``buf`` will be a bytearray with length a multiple of 512.  If
-       ``writeblocks`` is not defined then the device is mounted read-only.
-       The return value of these two functions is ignored.
+       ``readblocks`` 与 ``writeblocks``应该``buf``在块设备之间复制数据, 从``blocknum``设备上的块号开始。
+       ``buf``是一个长度为512的倍数的字节数。
+       如果``writeblocks``未定义，则设备将以 只读方式安装。这两个函数的返回值被忽略。
+       ``count`` 应该返回设备上可用的块数。
+       ``sync``, 如果实现，应同步设备上的数据。
     
-       ``count`` should return the number of blocks available on the device.
-       ``sync``, if implemented, should sync the data on the device.
-    
-       The parameter ``mountpoint`` is the location in the root of the filesystem
-       to mount the device.  It must begin with a forward-slash.
-    
-       If ``readonly`` is ``True``, then the device is mounted read-only,
-       otherwise it is mounted read-write.
-    
-       If ``mkfs`` is ``True``, then a new filesystem is created if one does not
-       already exist.
-    
-       To unmount a device, pass ``None`` as the device and the mount location
-       as ``mountpoint``.
+       参数``mountpoint``是安装设备的文件系统根目录中的位置。它必须以前斜杠开头。
+       如果``readonly``是``True``，那么设备将被安装为只读，否则它被安装为读写。    
+       如果``mkfs``是``True``，则创建一个新的文件系统（如果尚不存在）。
+       要卸载设备，请将``None``设备和安装位置作为传递``mountpoint``。
 
 .. function:: repl_uart(uart)
 
-   Get or set the UART object where the REPL is repeated on.
+   获取或设置REPL重复的UART对象。
 
 .. only:: port_pyboard
 
     .. function:: rng()
     
-       Return a 30-bit hardware generated random number.
+       返回一个30位硬件产生的真随机数。
 
 .. function:: sync()
 
-   Sync all file systems.
+   同步所有文件系统。
 
 .. only:: port_pyboard
 
     .. function:: unique_id()
     
-       Returns a string of 12 bytes (96 bits), which is the unique ID of the MCU.
+       返回一个12字节（96位）的字符串，这是MCU的唯一ID。
 
 .. function:: usb_mode([modestr], vid=0xf055, pid=0x9801, hid=pyb.hid_mouse)
 
-   If called with no arguments, return the current USB mode as a string.
+   如果没有参数调用，则返回当前的USB模式作为字符串。
+   如果被``modestr``提供，则尝试设置USB模式。这只有在从调用``boot.py``之前调用时才能:meth:`pyb.main()`完成。
+   以下值``modestr``被理解为：
 
-   If called with ``modestr`` provided, attempts to set USB mode.
-   This can only be done when called from ``boot.py`` before
-   :meth:`pyb.main()` has been called.  The following values of
-   ``modestr`` are understood:
+   - ``None``：禁用USB
+   - ``'VCP'``：使用VCP（虚拟COM端口）接口
+   - ``'VCP+MSC'``：使能VCP和MSC（大容量存储设备类）
+   - ``'VCP+HID'``：使能VCP和HID（人机界面设备）
+   为了向后兼容，``'CDC'``被理解为是 ``'VCP'``（并且对于``'CDC+MSC'``和``'CDC+HID'``）。
 
-   - ``None``: disables USB
-   - ``'VCP'``: enable with VCP (Virtual COM Port) interface
-   - ``'VCP+MSC'``: enable with VCP and MSC (mass storage device class)
-   - ``'VCP+HID'``: enable with VCP and HID (human interface device)
+   该参数``vid``和``pid``参数允许您指定VID（供应商ID）和PID（产品ID）。
 
-   For backwards compatibility, ``'CDC'`` is understood to mean
-   ``'VCP'`` (and similarly for ``'CDC+MSC'`` and ``'CDC+HID'``).
+   如果启用HID模式，您还可以传递``hid``关键字参数来指定HID详细信息。它需要一个元组（子类，协议，最大包长度，轮询间隔，报告描述符）。
+   默认情况下，它将为USB鼠标设置适当的值。还有一个``pyb.hid_keyboard``常数，这是USB键盘的一个适当的元组。
 
-   The ``vid`` and ``pid`` parameters allow you to specify the VID
-   (vendor id) and PID (product id).
-
-   If enabling HID mode, you may also specify the HID details by
-   passing the ``hid`` keyword parameter.  It takes a tuple of
-   (subclass, protocol, max packet length, polling interval, report
-   descriptor).  By default it will set appropriate values for a USB
-   mouse.  There is also a ``pyb.hid_keyboard`` constant, which is an
-   appropriate tuple for a USB keyboard.
-
-Classes
+类
 -------
 
 .. only:: port_pyboard
