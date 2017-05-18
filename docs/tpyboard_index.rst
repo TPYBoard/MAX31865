@@ -3,11 +3,11 @@ TPYBoard Document
 
 .. toctree::
 
-    micropythonbase/quickref.rst
-    micropythonbase/general.rst
-    micropythonbase/tutorial/index.rst
+    tpyboard/quickref.rst
+    tpyboard/general.rst
+    tpyboard/tutorial/index.rst
     library/index.rst
-    micropythonbase/hardware/index.rst
+    tpyboard/hardware/index.rst
     license.rst
     pyboard_contents.rst
 
