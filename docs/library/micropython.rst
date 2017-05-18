@@ -1,36 +1,29 @@
-:mod:`micropython` -- access and control MicroPython internals
+:mod:`micropython` -- 访问并控制MicroPython底层
 ==============================================================
 
 .. module:: micropython
-   :synopsis: access and control MicroPython internals
+   :synopsis: 访问并控制MicroPython底层
 
-Functions
+函数
 ---------
 
 .. function:: alloc_emergency_exception_buf(size)
 
-   Allocate ``size`` bytes of RAM for the emergency exception buffer (a good
-   size is around 100 bytes).  The buffer is used to create exceptions in cases
-   when normal RAM allocation would fail (eg within an interrupt handler) and
-   therefore give useful traceback information in these situations.
+   为异常缓冲区分配``size``内存字节（大小约为100字节）。
+   缓冲区被用来创建异常的情况下，当正常的RAM分配将失败（如在中断处理程序），因此在这些情况下，提供有用的回溯信息。
 
-   A good way to use this function is to put it at the start of your main script
-   (eg boot.py or main.py) and then the emergency exception buffer will be active
-   for all the code following it.
+   使用这个函数的一个好方法是把它放在主脚本的开始（如boot.py或mail.py）然后急救例外缓冲区将积极为所有它之后的代码。
 
 .. function:: mem_info([verbose])
 
-   Print information about currently used memory.  If the ``verbose`` argument
-   is given then extra information is printed.
+   打印当前使用的内存信息。如果给出了``verbose``参数，则打印额外的信息。
 
-   The information that is printed is implementation dependent, but currently
-   includes the amount of stack and heap used.  In verbose mode it prints out
-   the entire heap indicating which blocks are used and which are free.
+   打印的信息是实现依赖的，但当前包含堆栈和堆的使用量。
+   在详细模式中，它打印出整个堆，标示被使用和可用块。
 
 .. function:: qstr_info([verbose])
 
-   Print information about currently interned strings.  If the ``verbose``
-   argument is given then extra information is printed.
+   目前关于保留的字符串打印信息。如果给出了``verbose``参数，则打印额外的信息。
 
    The information that is printed is implementation dependent, but currently
    includes the number of interned strings and the amount of RAM they use.  In
