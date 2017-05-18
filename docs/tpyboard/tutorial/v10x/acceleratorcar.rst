@@ -5,9 +5,9 @@
 
 现在无线控制已经成为了电子科学领域的主流，这次就来教大家做一个主流中的主流--无线控制的小车，先给大家看一下最终的成品演示视频：
 	
-	.. raw:: html
-	
-		<video preload="none" src="http://www.micropython.net.cn/ueditor/php/upload/video/20160824/1472020805689816.ogg" data-setup="{}"/>
+.. raw:: html
+
+<video preload=none src=http://www.micropython.net.cn/ueditor/php/upload/video/20160824/1472020805689816.ogg/>
 
 
 首先介绍一下需要用到的材料：
@@ -43,17 +43,17 @@
 
 .. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20160815/1471255048558130.png
 
-	控制器
+控制器
 
 .. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20160815/1471255085467193.png
 
-	被控制端
+被控制端
 
 	这两张图是我画来帮助大家理解的(我这样做的被控制端的电路，速度略慢。大家可以在驱动那里做个放大电路，速度可以上去的，但是不能后退，大家可以直接使用L298N驱动。)，我做的时候是使用杜邦线的，并没有电路图，再上一张成品图给大家看。
 
 .. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20160815/1471255116488443.jpg
 
-	成品图
+成品图
 
 	这些都是给大家参考的，大家做的时候多学习多看看，亲身体验了才能真的学到东西。
 
