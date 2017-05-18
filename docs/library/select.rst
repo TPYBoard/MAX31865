@@ -1,67 +1,60 @@
-:mod:`select` -- wait for events on a set of streams
+:mod:`select` -- 等待流事件
 ========================================================================
 
 .. module:: select
-   :synopsis: wait for events on a set of streams
+   :synopsis: 等待流事件
 
-This module provides functions to wait for events on streams (select streams
-which are ready for operations).
+提供了在流上等待事件的功能（选择可操作的流）。
 
-Pyboard specifics
+TPYBoard特性
 -----------------
 
-Polling is an efficient way of waiting for read/write activity on multiple
-objects.  Current objects that support polling are: :class:`pyb.UART`,
-:class:`pyb.USB_VCP`.
+轮询是在多个对象上等待读/写活动的有效方法。 当前支持: :class:`pyb.UART`,:class:`pyb.USB_VCP`.
 
-Functions
+函数
 ---------
 
 .. function:: poll()
 
-   Create an instance of the Poll class.
+   创建轮询类的实例。
 
 .. function:: select(rlist, wlist, xlist[, timeout])
 
-   Wait for activity on a set of objects.
+   等待激活一组对象。
 
-   This function is provided for compatibility and is not efficient. Usage
-   of :class:`Poll` is recommended instead.
+   提供的兼容性和效率不高。 推荐使用 :class:`Poll`。
 
 .. _class: Poll
 
-class ``Poll``
+类 ``Poll``
 --------------
 
-Methods
+方法
 ~~~~~~~
 
 .. method:: poll.register(obj[, eventmask])
 
-   Register ``obj`` for polling. ``eventmask`` is logical OR of:
+   登记轮询对象 ``obj`` 。 ``eventmask`` 是以下逻辑:
 
-   * ``select.POLLIN``  - data available for reading
-   * ``select.POLLOUT`` - more data can be written
-   * ``select.POLLERR`` - error occurred
-   * ``select.POLLHUP`` - end of stream/connection termination detected
+   * ``select.POLLIN``  - 读取可用数据
+   * ``select.POLLOUT`` - 写入更多数据
+   * ``select.POLLERR`` - 发生错误
+   * ``select.POLLHUP`` - 流结束/连接终止检测
 
-   ``eventmask`` defaults to ``select.POLLIN | select.POLLOUT``.
+   ``eventmask`` 默认 ``select.POLLIN | select.POLLOUT``.
 
 .. method:: poll.unregister(obj)
 
-   Unregister ``obj`` from polling.
+   注销轮询对象 ``obj``。
 
 .. method:: poll.modify(obj, eventmask)
 
-   Modify the ``eventmask`` for ``obj``.
+   修改对象``obj``的 ``eventmask``。
 
 .. method:: poll.poll([timeout])
 
-   Wait for at least one of the registered objects to become ready. Returns
-   list of (``obj``, ``event``, ...) tuples, ``event`` element specifies
-   which events happened with a stream and is a combination of `select.POLL*`
-   constants described above. There may be other elements in tuple, depending
-   on a platform and version, so don't assume that its size is 2. In case of
-   timeout, an empty list is returned.
+   等待至少一个已注册的对象准备就绪。返回列表(``obj``, ``event``, ...) 元组, 
+   ``event`` 元素指定了一个流发生的事件，是上面所描述的 `select.POLL*`常量组合。
+   在元组中可能有其他元素，取决于平台和版本，所以不要假定它的大小是2。如果超时，则返回空列表。
 
-   Timeout is in milliseconds.
+   超时为毫秒。
