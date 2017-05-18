@@ -1,29 +1,28 @@
-:mod:`gc` -- control the garbage collector
+:mod:`gc` -- 控制垃圾回收
 ==========================================
 
 .. module:: gc
-   :synopsis: control the garbage collector
+   :synopsis: 控制垃圾回收
 
 Functions
 ---------
 
 .. function:: enable()
 
-   Enable automatic garbage collection.
+   启动自动垃圾回收。
 
 .. function:: disable()
 
-   Disable automatic garbage collection.  Heap memory can still be allocated,
-   and garbage collection can still be initiated manually using :meth:`gc.collect`.
+   禁用自动垃圾回收。 堆内存仍然可以分配，垃圾回收仍然可以手动启动使用 :meth:`gc.collect`.
 
 .. function:: collect()
 
-   Run a garbage collection.
+   运行垃圾回收。
 
 .. function:: mem_alloc()
 
-   Return the number of bytes of heap RAM that are allocated.
+   返回分配的堆RAM的字节数。
 
 .. function:: mem_free()
 
-   Return the number of bytes of available heap RAM.
+   返回可用堆内存的字节数。
