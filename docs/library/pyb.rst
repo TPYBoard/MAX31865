@@ -4,7 +4,7 @@
 .. module:: pyb
    :synopsis: 开发板关联功能函数
 
-``pyb``模块的主要功能与函数
+ ``pyb`` 模块的主要功能与函数
 
 时间相关函数
 ----------------------
@@ -242,7 +242,7 @@
 类
 -------
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. toctree::
        :maxdepth: 1
