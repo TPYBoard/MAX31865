@@ -20,34 +20,32 @@
   selected boards, targetting interoperatibility with legacy applications,
   will offer this.
 
-Constructors
+构造器
 ------------
 
 .. class:: uhashlib.sha256([data])
 
-    Create an SHA256 hasher object and optionally feed ``data`` into it.
+    创建一个SHA256哈希对象并提供 ``data`` 赋值。
 
 .. class:: uhashlib.sha1([data])
 
-    Create an SHA1 hasher object and optionally feed ``data`` into it.
+    创建一个SHA1哈希对象并提供 ``data`` 赋值。
 
 .. class:: uhashlib.md5([data])
 
-    Create an MD5 hasher object and optionally feed ``data`` into it.
+    创建一个MD5哈希对象并提供 ``data`` 赋值。
 
-Methods
+方法
 -------
 
 .. method:: hash.update(data)
 
-   Feed more binary data into hash.
+   将更多二进制数据放入哈希表中。
 
 .. method:: hash.digest()
 
-   Return hash for all data passed through hash, as a bytes object. After this
-   method is called, more data cannot be fed into the hash any longer.
+   返回字节对象哈希的所有数据。调用此方法后，将无法将更多数据送入哈希。
 
 .. method:: hash.hexdigest()
 
-   This method is NOT implemented. Use ``ubinascii.hexlify(hash.digest())``
-   to achieve a similar effect.
+   此方法没有实现， 使用 ``ubinascii.hexlify(hash.digest())`` 达到类似效果。
