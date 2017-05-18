@@ -1,10 +1,9 @@
 [Micropython]TPYBoard DIY电子时钟
 ==================================
 
-原创版权归山东萝卜科技有限公司所有,转载必须以链接形式注明作者和原始出处。
-
 实验目的
 ----------------------
+
 1. 学习在PC机系统中扩展简单I/O 接口的方法。
 2. 什么是SPI接口。
 3. 学习TPYBoard I2C接口的用法。
@@ -13,6 +12,7 @@
 
 所需元器件
 ---------------------
+
 DS3231模块一个
 TPYBoard板子一块
 LCD5110显示屏一个
@@ -21,28 +21,35 @@ LCD5110显示屏一个
 
 TPYBoard的SPI接口
 -------------------------------
+
 LCD5110需要SPI接口与TPYBoard进行连接传输数据，SPI接口是在CPU和外围低速器件之间进行同步串行数据传输，TPYBoard有两个SPI接口，我们用的为SPI1接口。
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20161126/1480150621179364.png
 
     TPYBoard的I2C接口
 ----------------------------------
+
 DS3231是I2C接口通信的，它通过I2C接口与TPYboard进行数据通讯，DS3231通过这个接口与TPYBoard进行双向通讯，进行数据传输，TPYBoard有两个I2C接口，我们在这用的是I2C接口1。
 
- .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20161126/1480150651145892.png .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20161126/1480150657750799.png
+ .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20161126/1480150651145892.png 
+ 
+ .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20161126/1480150657750799.png
 
 DS3231的接线方法
 ---------------------------------
+
 DS会我们在这只用到DS3231的SCL,SDA,VCC,GND四个针脚即可设定读出当前时间，我们用的位I2C接口1，即DS3231的针脚SCL接TPYboard的针脚X9，针脚SDA接TPYBoard的针脚X10。
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20161126/1480150682569300.png
 
 控制5110显示屏显示6x8字符
 ----------------------------------------
+
 先看一下LCD5110针脚含义吧（注意：LCD5110的针脚有些不一样的）
 
 TPYBoard的针脚与5110的针脚对应关系如下：
 ------------------------------------------------------------
+
 TPYBoard  LCD5110 memo
 
 # any  Pin => RST  Reset pin (0=reset, 1=normal)
@@ -71,6 +78,7 @@ GND
 
 源代码
 -------------------
+
 接线ok后，并且导入font.py文件、upcd8544.py文件以及DS3231.py，编写main.py设定时间，运行main.py即可将当前时间显示在5110显示屏上。
 1  # main.py -- put your code here!
 2  import pyb
