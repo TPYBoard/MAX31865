@@ -1,8 +1,8 @@
-:mod:`cmath` -- mathematical functions for complex numbers
+:mod:`cmath` -- 复数的数学函数
 ==========================================================
 
 .. module:: cmath
-   :synopsis: mathematical functions for complex numbers
+   :synopsis: 复数的数学函数
 
 ``cmath``提供了基本的复数运算功能。它不支持 WiPy 和 ESP8266，因为需要浮点库支持.
 
