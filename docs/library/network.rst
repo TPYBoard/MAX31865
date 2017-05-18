@@ -1,18 +1,15 @@
 ****************************************
-:mod:`network` --- network configuration
+:mod:`network` --- 网络配置
 ****************************************
 
 .. module:: network
-   :synopsis: network configuration
+   :synopsis: 网络配置
 
-This module provides network drivers and routing configuration. To use this
-module, a MicroPython variant/build with network capabilities must be installed.
-Network drivers for specific hardware are available within this module and are
-used to configure hardware network interface(s). Network services provided
-by configured interfaces are then available for use via the :mod:`socket`
-module.
+提供网络驱动程序和路由配置。micropython变量/编译与网络功能必须安装。
+特定硬件的网络驱动程序可在此模块中使用，并用于配置硬件网络接口。
+通过配置接口提供的网络服务可用于通过:mod:`socket`.
 
-For example::
+例如::
 
     # configure a specific network interface
     # see below for examples of specific drivers
@@ -22,10 +19,10 @@ For example::
 
     # now use socket as usual
     import socket
-    addr = socket.getaddrinfo('micropython.org', 80)[0][-1]
+    addr = socket.getaddrinfo('tpyboard.com', 80)[0][-1]
     s = socket.socket()
     s.connect(addr)
-    s.send(b'GET / HTTP/1.1\r\nHost: micropython.org\r\n\r\n')
+    s.send(b'GET / HTTP/1.1\r\nHost: tpyboard.com\r\n\r\n')
     data = s.recv(1000)
     s.close()
 
@@ -48,15 +45,15 @@ For example::
         # enable the server again with new settings
         server.init(login=('user', 'password'), timeout=600)
 
-    Constructors
-    ------------
+    构造器
+    ------------
 
     .. class:: network.Server(id, ...)
 
-       Create a server instance, see ``init`` for parameters of initialization.
+       创建服务器实例，参见初始化参数 ``init`` 。
 
-    Methods
-    -------
+    方法
+    -------
 
     .. method:: server.init(\*, login=('micro', 'python'), timeout=300)
 
