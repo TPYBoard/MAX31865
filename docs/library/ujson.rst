@@ -1,20 +1,18 @@
-:mod:`ujson` -- JSON encoding and decoding
+:mod:`ujson` -- JSON编码与解码
 ==========================================
 
 .. module:: ujson
-   :synopsis: JSON encoding and decoding
+   :synopsis: JSON编码与解码
 
-This modules allows to convert between Python objects and the JSON
-data format.
+提供 Python 对象到 JSON（JavaScript Object Notation） 数据格式的转换。
 
-Functions
+函数
 ---------
 
 .. function:: dumps(obj)
 
-   Return ``obj`` represented as a JSON string.
+   返回 ``obj`` JSON字符串。
 
 .. function:: loads(str)
 
-   Parse the JSON ``str`` and return an object.  Raises ValueError if the
-   string is not correctly formed.
+   解析 ``str`` 字符串并返回对象。如果字符串格式错误将引发 ValueError 异常。
