@@ -1,29 +1,26 @@
-:mod:`pyb` --- functions related to the board
+:mod:`pyb` --- 开发板关联功能函数
 =============================================
 
 .. module:: pyb
-   :synopsis: functions related to the board
+   :synopsis: 开发板关联功能函数
 
-The ``pyb`` module contains specific functions related to the board.
+``pyb``模块的主要功能与函数
 
-Time related functions
+时间相关函数
 ----------------------
 
 .. function:: delay(ms)
 
-   Delay for the given number of milliseconds.
+   延时函数，参数的单位为毫秒。
 
 .. function:: udelay(us)
 
-   Delay for the given number of microseconds.
+   延时函数，参数的单位为微秒。
 
 .. function:: millis()
 
-   Returns the number of milliseconds since the board was last reset.
-   
-   The result is always a micropython smallint (31-bit signed number), so
-   after 2^30 milliseconds (about 12.4 days) this will start to return
-   negative numbers.
+   返回自上次重置电路以来的毫秒数，
+   结果是一个31位有符号整数，在2**30（约12.4天）后开始返回负数。
 
    Note that if :meth:`pyb.stop()` is issued the hardware counter supporting this
    function will pause for the duration of the "sleeping" state. This
@@ -31,11 +28,7 @@ Time related functions
 
 .. function:: micros()
 
-   Returns the number of microseconds since the board was last reset.
-   
-   The result is always a micropython smallint (31-bit signed number), so
-   after 2^30 microseconds (about 17.8 minutes) this will start to return
-   negative numbers.
+   返回自上次重置电路以来的微秒数。结果是一个31位有符号整数，在2**30微秒（约17.8分钟）后开始返回负数。
 
    Note that if :meth:`pyb.stop()` is issued the hardware counter supporting this
    function will pause for the duration of the "sleeping" state. This
@@ -43,12 +36,11 @@ Time related functions
 
 .. function:: elapsed_millis(start)
 
-   Returns the number of milliseconds which have elapsed since ``start``.
+   返回``start``已经过去的毫秒数。
    
-   This function takes care of counter wrap, and always returns a positive
-   number. This means it can be used to measure periods up to about 12.4 days.
+   负责计数器换行，并且始终返回正数。这意味着它可以用于测量高达约12.4天的周期。
    
-   Example::
+      例如::
 
        start = pyb.millis()
        while pyb.elapsed_millis(start) < 1000:
@@ -56,44 +48,39 @@ Time related functions
 
 .. function:: elapsed_micros(start)
 
-   Returns the number of microseconds which have elapsed since ``start``.
+   返回已经过去的微秒数
+   负责计数器换行，并且始终返回正数。这意味着它可以用于测量高达约17.8分钟的时间段。
    
-   This function takes care of counter wrap, and always returns a positive
-   number. This means it can be used to measure periods up to about 17.8 minutes.
-   
-   Example::
+   例如::
 
        start = pyb.micros()
        while pyb.elapsed_micros(start) < 1000:
            # Perform some operation
            pass
 
-Reset related functions
+重置相关函数
 -----------------------
 
 .. function:: hard_reset()
 
-   Resets the pyboard in a manner similar to pushing the external RESET
-   button.
+   重置开发板，相当于开发板上的复位键
 
 .. function:: bootloader()
 
-   Activate the bootloader without BOOT\* pins.
+   启动Bootloader而不使用BOOT *引脚。
 
 .. function:: fault_debug(value)
 
-   Enable or disable hard-fault debugging.  A hard-fault is when there is a fatal
-   error in the underlying system, like an invalid memory access.
+   启用或禁用硬故障调试。硬盘故障是在底层系统发生致命错误时，如无效内存访问。
 
-   If the `value` argument is `False` then the board will automatically reset if
-   there is a hard fault.
+   如果值参数为`False`，那么如果存在硬故障，则主板将自动重置。
 
-   If `value` is `True` then, when the board has a hard fault, it will print the
-   registers and the stack trace, and then cycle the LEDs indefinitely.
+   如果值参数为`True`，当主板有硬件故障，它会打印的寄存器和堆栈跟踪，并无限期地然后循环的指示灯。
 
-   The default value is disabled, i.e. to automatically reset.
+   默认值被禁用，即自动复位。
+   
 
-Interrupt related functions
+中断相关函数
 ---------------------------
 
 .. function:: disable_irq()
@@ -111,7 +98,7 @@ Interrupt related functions
    this function is to pass it the value returned by ``disable_irq`` to
    exit a critical section.
 
-Power related functions
+电源相关功能
 -----------------------
 
 .. only:: port_pyboard
