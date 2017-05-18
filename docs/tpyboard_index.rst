@@ -9,7 +9,7 @@ TPYBoard Document
     library/index.rst
     tpyboard/hardware/index.rst
     license.rst
-    pyboard_contents.rst
+    tpyboard_contents.rst
 
 Indices and tables
 ==================
