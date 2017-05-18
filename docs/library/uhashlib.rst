@@ -1,12 +1,10 @@
-:mod:`uhashlib` -- hashing algorithms
+:mod:`uhashlib` -- 哈希算法
 =====================================
 
 .. module:: uhashlib
-   :synopsis: hashing algorithms
+   :synopsis: 哈希算法
 
-This module implements binary data hashing algorithms. The exact inventory
-of available algorithms depends on a board. Among the algorithms which may
-be implemented:
+该模块实现了二进制数据哈希算法。精确可用的算法依赖于TPYBoard。其中的算法可能实施:
 
 * SHA256 - The current generation, modern hashing algorithm (of SHA2 series).
   It is suitable for cryptographically-secure purposes. Included in the
