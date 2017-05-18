@@ -8,4 +8,6 @@
 .admonition-difference-to-cpython .admonition-title {
     margin: 4px;
 } 
-.rst-pro { display: none;}
+body{
+	font-size:14px;
+}
