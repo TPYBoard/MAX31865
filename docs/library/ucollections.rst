@@ -1,24 +1,20 @@
-:mod:`ucollections` -- collection and container types
+:mod:`ucollections` -- 收集和容器类型
 =====================================================
 
 .. module:: ucollections
-   :synopsis: collection and container types
+   :synopsis: 收集和容器类型
 
-This module implements advanced collection and container types to
-hold/accumulate various objects.
+模块实现先进的集合和容器类型来保存/累积各种对象。
 
-Classes
+类
 -------
 
 .. function:: namedtuple(name, fields)
 
-    This is factory function to create a new namedtuple type with a specific
-    name and set of fields. A namedtuple is a subclass of tuple which allows
-    to access its fields not just by numeric index, but also with an attribute
-    access syntax using symbolic field names. Fields is a sequence of strings
-    specifying field names. For compatibility with CPython it can also be a
-    a string with space-separated field named (but this is less efficient).
-    Example of use::
+    这是工厂函数创建一个新的namedtuple型与一个特定的字段名称和集合。
+    namedtuple是元组允许子类要访问它的字段不仅是数字索引，而且还具有属性使用符号字段名访问语法。
+    字段是字符串序列指定字段名称。为了兼容的实现也可以用空间分隔的字符串命名的字段（但效率较低）
+    使用示例::
 
         from ucollections import namedtuple
 
@@ -30,9 +26,7 @@ Classes
 
 .. function:: OrderedDict(...)
 
-    ``dict`` type subclass which remembers and preserves the order of keys
-    added. When ordered dict is iterated over, keys/items are returned in
-    the order they were added::
+    ``dict`` 类型的子类，记住并保留键的追加顺序。keys/items返回的顺序被加入::
 
         from ucollections import OrderedDict
 
