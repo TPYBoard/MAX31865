@@ -1,13 +1,12 @@
-:mod:`uio` -- input/output streams
+:mod:`uio` -- 输入/输出流
 ==================================
 
 .. module:: uio
-   :synopsis: input/output streams
+   :synopsis:  输入/输出流
 
-This module contains additional types of stream (file-like) objects
-and helper functions.
+包含流类型 (类似文件) 对象和帮助函数。
 
-Conceptual hierarchy
+概念层次
 --------------------
 
 .. admonition:: Difference to CPython
@@ -72,41 +71,32 @@ Note that for efficiency, MicroPython doesn't provide abstract base
 classes corresponding to the hierarchy above, and it's not possible
 to implement, or subclass, a stream class in pure Python.
 
-Functions
+函数
 ---------
 
 .. function:: open(name, mode='r', **kwargs)
 
-    Open a file. Builtin ``open()`` function is aliased to this function.
-    All ports (which provide access to file system) are required to support
-    `mode` parameter, but support for other arguments vary by port.
+    打开一个文件，关联到内建函数``open()``。所有端口 (用于访问文件系统) 需要支持模式参数，但支持其他参数不同的端口。
 
-Classes
+类
 -------
 
 .. class:: FileIO(...)
 
-    This is type of a file open in binary mode, e.g. using ``open(name, "rb")``.
-    You should not instantiate this class directly.
+    这个文件类型用二进制方式打开文件，等于使用``open(name, "rb")``。
+    不应直接使用这个实例。
 
 .. class:: TextIOWrapper(...)
 
-    This is type of a file open in text mode, e.g. using ``open(name, "rt")``.
-    You should not instantiate this class directly.
+    这个类型以文本方式打开文件，等同于使用``open(name, "rt")``
+    不应直接使用这个实例。
 
 .. class:: StringIO([string])
 .. class:: BytesIO([string])
 
-    In-memory file-like objects for input/output. `StringIO` is used for
-    text-mode I/O (similar to a normal file opened with "t" modifier).
-    `BytesIO` is used for binary-mode I/O (similar to a normal file
-    opened with "b" modifier). Initial contents of file-like objects
-    can be specified with `string` parameter (should be normal string
-    for `StringIO` or bytes object for `BytesIO`). All the usual file
-    methods like ``read()``, ``write()``, ``seek()``, ``flush()``,
-    ``close()`` are available on these objects, and additionally, a
-    following method:
+    内存文件对象。StringIO 用于文本模式 I/O (用 “t” 打开文件)，BytesIO 用于二进制方式 (用 “b” 方式)。文件对象的初始内容可以用字符串参数指定（stringio 用普通字符串，bytesio用byets对象）。所有的文件方法，如``read()``, ``write()``, ``seek()``, ``flush()``,
+    ``close()`` 都可以用在这些对象上，包括下面方法:
 
     .. method:: getvalue()
 
-        Get the current contents of the underlying buffer which holds data.
+        获取缓存去内容。
