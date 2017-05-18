@@ -1,15 +1,12 @@
-:mod:`machine` --- functions related to the hardware
+:mod:`machine` --- 与硬件相关的功能
 ====================================================
 
 .. module:: machine
-   :synopsis: functions related to the hardware
+   :synopsis: 与硬件相关的功能
 
-The ``machine`` module contains specific functions related to the hardware
-on a particular board. Most functions in this module allow to achieve direct
-and unrestricted access to and control of hardware blocks on a system
-(like CPU, timers, buses, etc.). Used incorrectly, this can lead to
-malfunction, lockups, crashes of your board, and in extreme cases, hardware
-damage.
+``machine`` 模块包含与特定板上的硬件相关的特定函数。
+在这个模块中的大多数功能允许实现直接和不受限制地访问和控制系统上的硬件块（如CPU，定时器，总线等）。
+使用不当，会导致故障，死机，你会崩溃，在极端的情况下，硬件损坏。
 
 .. _machine_callbacks:
 
@@ -19,19 +16,18 @@ This is true for both physical devices with IDs >= 0 and "virtual" devices
 with negative IDs like -1 (these "virtual" devices are still thin shims on
 top of real hardware and real hardware interrupts). See :ref:`isr_rules`.
 
-Reset related functions
+复位功能
 -----------------------
 
 .. function:: reset()
 
-   Resets the device in a manner similar to pushing the external RESET
-   button.
+   重置设备的方式类似类似按下rst按钮。
 
 .. function:: reset_cause()
 
    Get the reset cause. See :ref:`constants <machine_constants>` for the possible return values.
 
-Interrupt related functions
+中断功能
 ---------------------------
 
 .. function:: disable_irq()
@@ -47,7 +43,7 @@ Interrupt related functions
    The ``state`` parameter should be the value that was returned from the most
    recent call to the ``disable_irq`` function.
 
-Power related functions
+有效的相关功能
 -----------------------
 
 .. function:: freq()
@@ -80,7 +76,7 @@ Power related functions
 
         Get the wake reason. See :ref:`constants <machine_constants>` for the possible return values.
 
-Miscellaneous functions
+更多功能
 -----------------------
 
 .. only:: port_wipy
@@ -114,7 +110,7 @@ Miscellaneous functions
 
 .. _machine_constants:
 
-Constants
+常数
 ---------
 
 .. data:: machine.IDLE
@@ -137,7 +133,7 @@ Constants
 
     Wake-up reasons.
 
-Classes
+类
 -------
 
 .. only:: not port_wipy
