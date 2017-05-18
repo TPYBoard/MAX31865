@@ -1,15 +1,12 @@
-MicroPython libraries
+MicroPython类库
 =====================
 
-This chapter describes modules (function and class libraries) which are built
-into MicroPython. There are a few categories of modules:
+本章介绍了构成micropython的模块（函数和类库）。有几类模块:
 
-* Modules which implement a subset of standard Python functionality and are not
-  intended to be extended by the user.
-* Modules which implement a subset of Python functionality, with a provision
-  for extension by the user (via Python code).
-* Modules which implement MicroPython extensions to the Python standard libraries.
-* Modules specific to a particular port and thus not portable.
+* 内置模块：标准Python功能的子集，用户不能扩展。
+* 扩展模块：实现了Python功能的一个子集，并提供用户扩展（通过Python代码）。
+* 扩展模块：实现micropython的Python标准库。
+* 硬件驱动模块:特定端口或者硬件驱动的模块，因此不可移植。
 
 Note about the availability of modules and their contents: This documentation
 in general aspires to describe all modules and functions/classes which are
@@ -30,18 +27,10 @@ modules from the Python standard library, as well as further MicroPython
 extensions to it, can be found in the `micropython-lib repository
 <https://github.com/micropython/micropython-lib>`_.
 
-Python standard libraries and micro-libraries
+Python标准库和微型库
 ---------------------------------------------
 
-The following standard Python libraries have been "micro-ified" to fit in with
-the philosophy of MicroPython.  They provide the core functionality of that
-module and are intended to be a drop-in replacement for the standard Python
-library.  Some modules below use a standard Python name, but prefixed with "u",
-e.g. ``ujson`` instead of ``json``. This is to signify that such a module is
-micro-library, i.e. implements only a subset of CPython module functionality.
-By naming them differently, a user has a choice to write a Python-level module
-to extend functionality for better compatibility with CPython (indeed, this is
-what done by micropython-lib project mentioned above).
+标准的Python库被 “微型化”后，就是micropython标准库。它们仅仅提供了该模块的核心功能。一些模块没有直接使用标准的Python的名字，而是冠以"u"，例如``ujson``代替``json``。也就是说micropython标准库（=微型库），只实现了一部分模块功能。通过他们的名字不同，用户有选择的去写一个Python级模块扩展功能，也是为实现更好的兼容性。
 
 On some embedded platforms, where it may be cumbersome to add Python-level
 wrapper modules to achieve naming compatibility with CPython, micro-modules
@@ -144,11 +133,10 @@ it will fallback to loading the built-in ``ujson`` module.
        uzlib.rst
 
 
-MicroPython-specific libraries
+MicroPython类库详述
 ------------------------------
 
-Functionality specific to the MicroPython implementation is available in
-the following libraries.
+MicroPython的特有功能如下。
 
 .. toctree::
    :maxdepth: 1
@@ -163,10 +151,10 @@ the following libraries.
 
 .. only:: port_tpyboard
 
-   Libraries specific to the tpyboard
-   ---------------------------------
+   TPYBoard类库详述
+   ---------------------------------
 
-   The following libraries are specific to the pyboard.
+   以下是TPYBoard的具体类库。
 
    .. toctree::
       :maxdepth: 2
