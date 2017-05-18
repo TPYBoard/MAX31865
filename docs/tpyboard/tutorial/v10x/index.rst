@@ -10,3 +10,5 @@ TPYBoard v10x 典型实例
    intro.rst
    script.rst
    repl.rst
+   template.rst
+   acceleratorcar.rst
