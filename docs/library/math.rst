@@ -1,39 +1,38 @@
-:mod:`math` -- mathematical functions
+:mod:`math` -- 数学函数
 =====================================
 
 .. module:: math
-   :synopsis: mathematical functions
+   :synopsis: 数学函数
 
-The ``math`` module provides some basic mathematical functions for
-working with floating-point numbers.
+用浮点数实现一些基本数学函数。
 
-*Note:* On the pyboard, floating-point numbers have 32-bit precision.
+*Note:* 需要带有硬件FPU，精度是32位。
 
 Availability: not available on WiPy. Floating point support required
 for this module.
 
-Functions
+函数
 ---------
 
 .. function:: acos(x)
 
-   Return the inverse cosine of ``x``.
+   返回 ``x``的反余弦。
 
 .. function:: acosh(x)
 
-   Return the inverse hyperbolic cosine of ``x``.
+   返回 ``x``的逆双曲余弦。
 
 .. function:: asin(x)
 
-   Return the inverse sine of ``x``.
+   返回 ``x``的反正弦。
 
 .. function:: asinh(x)
 
-   Return the inverse hyperbolic sine of ``x``.
+   返回``x``的逆双曲正弦。
 
 .. function:: atan(x)
 
-   Return the inverse tangent of ``x``.
+   返回 ``x``的逆切线。
 
 .. function:: atan2(y, x)
 
@@ -169,15 +168,15 @@ Functions
 
 .. function:: trunc(x)
 
-   Return an integer, being ``x`` rounded towards 0.
+   返回一个整数, ``x`` 接近于0。
 
-Constants
+常数
 ---------
 
 .. data:: e
 
-   base of the natural logarithm
+   自然对数的底
 
 .. data:: pi
 
-   the ratio of a circle's circumference to its diameter
+   圆周率
