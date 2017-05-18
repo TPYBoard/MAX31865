@@ -86,7 +86,7 @@
 .. function:: disable_irq()
 
    禁用中断请求。
-   返回上一个IRQ状态：``False``/``True``分别为禁用/启用的IRQ。该返回值可以传递给enable_irq将IRQ恢复到原始状态。
+   返回上一个IRQ状态： ``False`` / ``True`` 分别为禁用/启用的IRQ。该返回值可以传递给enable_irq将IRQ恢复到原始状态。
 
 .. function:: enable_irq(state=True)
 
