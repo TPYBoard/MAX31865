@@ -1,6 +1,13 @@
 {% extends "!layout.html" %}
 {% set css_files = css_files + ["_static/customstyle.css"] %}
 
+{% if display_github %}
+  <li><a href="https://github.com/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}.rst">
+    Show on GitHub1</a></li>
+  <li><a href="https://github.com/{{ github_user }}/{{ github_repo }}/edit/{{ github_version }}{{ conf_py_path }}{{ pagename }}.rst">
+    Edit on GitHub1</a></li>
+{% endif %}
+
 {# we change the master_doc variable so that links to the index
    page are to index.html instead of <port>_index.html #}
 {% set master_doc = "index" %}
