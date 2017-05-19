@@ -3,12 +3,9 @@
 TPYBoard快速参考手册
 ===============================
 
-下面是PYBv1.0的针脚图。你也可以查看其他版本的pyboard的针脚图:
-`PYBv1.1 <http://micropython.org/resources/pybv11-pinout.jpg>`__
-or `PYBLITEv1.0-AC <http://micropython.org/resources/pyblitev10ac-pinout.jpg>`__
-or `PYBLITEv1.0 <http://micropython.org/resources/pyblitev10-pinout.jpg>`__.
+下面是tPYBv10x的针脚图。你也可以查看其他版本的tpyboard的针脚图:.
 
-.. image:: http://micropython.org/resources/pybv10-pinout.jpg
+.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20170310/1489140924942008.png
     :alt: PYBv1.0 pinout
     :width: 700px
 
