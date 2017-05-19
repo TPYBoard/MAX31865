@@ -26,9 +26,3 @@ TPYBoard v10x 典型实例
     template.rst
     ultrasonicranging.rst
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/master
