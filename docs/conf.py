@@ -315,7 +315,7 @@ texinfo_documents = [
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'http://docs.python.org/': ''}
+intersphinx_mapping = {'http://docs.python.org/': None}
 
 # Append the other ports' specific folders/files to the exclude pattern
 exclude_patterns.extend([port + '*' for port in ports if port != micropy_port])
