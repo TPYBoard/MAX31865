@@ -33,7 +33,7 @@ MAX31865 LIB库使用说明：
 
 请参阅 docs/MAX31865LIB说明.pdf 文档
 
-地址：https://github.com/TPYBoard/MAX31865/blob/master/docs/MAX31865LIB说明.pdf
+地址：https://github.com/TPYBoard/MAX31865/blob/master/docs/MAX31865LIB%E8%AF%B4%E6%98%8E.pdf
 
 <h2>扩展文件</h2>
 
