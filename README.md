@@ -11,8 +11,7 @@ MAX31865模块主要使用SPI接口与单片机进行通信，本次例程使用
 <ul>
 <li>docs/ -- MAX31865模块LIB库的使用说明</li>
 <li>image/ -- MAX31865模块实物图及连接指示图</li>
-<li>lib/ -- MAX31865模块的驱动文件和LIB库</li>
-<li>main.c  -- 主程序</li>
+<li>project/ -- MAX31865模块的Keil示例工程源码</li>
 </ul>
 
 <h2>使用说明</h2>
@@ -35,7 +34,4 @@ MAX31865 LIB库使用说明：
 
 地址：https://github.com/TPYBoard/MAX31865/blob/master/docs/MAX31865LIB%E8%AF%B4%E6%98%8E.pdf
 
-<h2>扩展文件</h2>
-
-lib文件及使用说明下载地址：http://tpyboard.com/download/data/178.html
 
